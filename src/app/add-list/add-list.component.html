@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="mini">
+        <form action="" [formGroup]="rform" >
+            <legend class="text-center fw-bold pb-4">Add New-list with Date</legend>
+            <mat-form-field [style.width.px]=330 class="form-group">
+                <mat-label>Enter ID</mat-label>
+                <input matInput type="number" formControlName="id">
+            </mat-form-field>
+             <mat-form-field [style.width.px]=330 class="form-group">
+                <mat-label>Enter Date</mat-label>
+                <input matInput type="date" formControlName="date">
+            </mat-form-field><br>
+            <div class="form-group"  formArrayName="tasks">
+             <div *ngFor="let task of rform.get('tasks')['controls'];index as i;">
+                        <mat-form-field [style.width.px]=330>
+                            <mat-label>Add Tasks</mat-label>
+                            <input matInput type="text" name="addtask" id="addtask"  [formControlName]="i" class="form-control mt-3">
+                        </mat-form-field>
+                </div>
+             </div>
+            <div class="btns py-3">
+                <button type="button" class="btn btn-primary" (click)="addTask()">add-task</button>
+                <button type="submit" class="btn btn-success add" (click)="addTodoList(rform)">Submit-List</button>
+            </div>
+        </form>
+    </div>
+</div>
+

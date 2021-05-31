@@ -1,0 +1,248 @@
+<div class="container pt-3 pb-5">
+    <div class="btns">
+    <button class="btn" (click)="Q1Click()">Q1</button>
+    <button class="btn" (click)="Q2Click()">Q2</button>
+    <button class="btn" (click)="Q3Click()">Q3</button>
+    <button class="btn" (click)="Q4Click()">Q4</button>
+    <button class="btn" (click)="yearClick()">Yearly</button>
+    </div>
+
+<div class="mini-container mt-3">
+     <table class="table table-bordered fw-bold text-center" *ngIf="!yearlyFlag">
+         <thead class="bg-dark text-light">
+             <tr>
+                 <th colspan="7">Yearly Progress of 2021-22</th>
+             </tr>
+         </thead>
+         <tbody>
+             <tr>
+                 <td class="p-5 pro" rowspan="3">Professional Services</td>
+                 <td colspan="6" class="head">{{value}}</td>
+             </tr>
+             <tr class="head">
+                 <td colspan="2">{{date1}}</td>
+                 <td colspan="2">{{date2}}</td>
+                 <td colspan="2">{{date3}}</td>
+             </tr>
+             <tr class="head">
+                 <td>Plan</td>
+                 <td>Actual</td>
+                 <td>Plan</td>
+                 <td>Actual</td>
+                 <td>Plan</td>
+                 <td>Actual</td>
+             </tr>
+             <!-- line1 -->
+             <tr *ngIf="q1Flag">
+                 <td class="body">Revenue</td>
+                 <td *ngFor="let que of q1">{{que}}</td>
+             </tr>
+             <tr *ngIf="q2Flag">
+                <td class="body">Revenue</td>
+                <td *ngFor="let que of q2">{{que}}</td>
+            </tr>
+            <tr *ngIf="q3Flag">
+                <td class="body">Revenue</td>
+                <td *ngFor="let que of q3">{{que}}</td>
+            </tr>
+            <tr *ngIf="q4Flag">
+                <td class="body">Revenue</td>
+                <td *ngFor="let que of q4">{{que}}</td>
+            </tr>
+            <!-- line2 -->
+            <tr *ngIf="q1Flag">
+                <td class="body">Resource Cost</td>
+                <td *ngFor="let que of q1">{{que}}</td>
+            </tr>
+            <tr *ngIf="q2Flag">
+               <td class="body">Resource Cost</td>
+               <td *ngFor="let que of q2">{{que}}</td>
+           </tr>
+           <tr *ngIf="q3Flag">
+               <td class="body">Resource Cost</td>
+               <td *ngFor="let que of q3">{{que}}</td>
+           </tr>
+           <tr *ngIf="q4Flag">
+               <td class="body">Resource Cost</td>
+               <td *ngFor="let que of q4">{{que}}</td>
+           </tr>
+           <!-- line3 -->
+           <tr *ngIf="q1Flag">
+            <td class="body">Gross Margin %</td>
+            <td *ngFor="let que of q1">{{que}}</td>
+            </tr>
+            <tr *ngIf="q2Flag">
+                <td class="body">Gross Margin %</td>
+                <td *ngFor="let que of q2">{{que}}</td>
+            </tr>
+            <tr *ngIf="q3Flag">
+                <td class="body">Gross Margin %</td>
+                <td *ngFor="let que of q3">{{que}}</td>
+            </tr>
+            <tr *ngIf="q4Flag">
+                <td class="body">Gross Margin %</td>
+                <td *ngFor="let que of q4">{{que}}</td>
+            </tr>
+            <!-- line4 -->
+            <tr *ngIf="q1Flag">
+                <td class="body">Billable Head count</td>
+                <td *ngFor="let que of q1">{{que}}</td>
+            </tr>
+            <tr *ngIf="q2Flag">
+               <td class="body">Billable Head count</td>
+               <td *ngFor="let que of q2">{{que}}</td>
+           </tr>
+           <tr *ngIf="q3Flag">
+               <td class="body">Billable Head count</td>
+               <td *ngFor="let que of q3">{{que}}</td>
+           </tr>
+           <tr *ngIf="q4Flag">
+               <td class="body">Billable Head count</td>
+               <td *ngFor="let que of q4">{{que}}</td>
+           </tr>
+           <!-- line5 -->
+           <tr *ngIf="q1Flag">
+            <td class="body">Per Person Revenue</td>
+            <td *ngFor="let que of q1">{{que}}</td>
+            </tr>
+            <tr *ngIf="q2Flag">
+            <td class="body">Per Person Revenue</td>
+            <td *ngFor="let que of q2">{{que}}</td>
+            </tr>
+            <tr *ngIf="q3Flag">
+                <td class="body">Per Person Revenue</td>
+                <td *ngFor="let que of q3">{{que}}</td>
+            </tr>
+            <tr *ngIf="q4Flag">
+                <td class="body">Per Person Revenue</td>
+                <td *ngFor="let que of q4">{{que}}</td>
+            </tr>
+       <!-- line6 -->
+            <tr *ngIf="q1Flag">
+                <td class="body">Per Person Cost</td>
+                <td *ngFor="let que of q1">{{que}}</td>
+            </tr>
+            <tr *ngIf="q2Flag">
+                <td class="body">Per Person Cost</td>
+                <td *ngFor="let que of q2">{{que}}</td>
+            </tr>
+            <tr *ngIf="q3Flag">
+                <td class="body">Per Person Cost</td>
+                <td *ngFor="let que of q3">{{que}}</td>
+            </tr>
+            <tr *ngIf="q4Flag">
+                <td class="body">Per Person Cost</td>
+                <td *ngFor="let que of q4">{{que}}</td>
+            </tr>
+         </tbody>
+     </table>
+     <!-- Yearly table -->
+     <div style="overflow-x:scroll;">
+     <table class="table table-bordered fw-bold text-center" *ngIf="yearlyFlag">
+        <thead class="bg-dark text-light">
+            <tr>
+                <th colspan="31">Yearly Progress of 2021-22</th>
+            </tr>
+        </thead>
+        <tbody class="head">
+            <tr>
+                <td class="p-5 bg-pr" rowspan="3">Professional Services</td>
+                <td class="pro" colspan="6">Q1</td>
+                <td class="pro" colspan="6">Q2</td>
+                <td class="pro" colspan="6">Q3</td>
+                <td class="pro" colspan="6">Q4</td>
+
+            </tr>
+            <tr class="pro">
+                <td colspan="2">April 2021-22</td>
+                <td colspan="2">May 2021-22</td>
+                <td colspan="2">June 2021-22</td>
+                <td colspan="2">July 2021-22</td>
+                <td colspan="2">Aug 2021-22</td>
+                <td colspan="2">Sec 2021-22</td>
+                <td colspan="2">Oct 2021-22</td>
+                <td colspan="2">Nov 2021-22</td>
+                <td colspan="2">Dec 2021-22</td>
+                <td colspan="2">Jan 2021-22</td>
+                <td colspan="2">Feb 2021-22</td>
+                <td colspan="2">Mar 2021-22</td>
+            </tr>
+            <tr class="pro">
+                <td>Plan</td>
+                <td>Actual</td>
+                <td>Plan</td>
+                <td>Actual</td>
+                <td>Plan</td>
+                <td>Actual</td>
+                <td>Plan</td>
+                <td>Actual</td>
+                <td>Plan</td>
+                <td>Actual</td>
+                <td>Plan</td>
+                <td>Actual</td>
+                <td>Plan</td>
+                <td>Actual</td>
+                <td>Plan</td>
+                <td>Actual</td>
+                <td>Plan</td>
+                <td>Actual</td>
+                <td>Plan</td>
+                <td>Actual</td>
+                <td>Plan</td>
+                <td>Actual</td>
+                <td>Plan</td>
+                <td>Actual</td>
+            </tr>
+            <!-- line1 -->
+            <tr>
+                <td class="pr">Revenue</td>
+                <td *ngFor="let que of q1">{{que}}</td>
+                <td *ngFor="let que of q2">{{que}}</td>
+                <td *ngFor="let que of q3">{{que}}</td>
+                <td *ngFor="let que of q4">{{que}}</td>
+            </tr>
+            <!-- line2 -->
+            <tr>
+                <td class="pr">REsource Cost</td>
+                <td *ngFor="let que of q1">{{que}}</td>
+                <td *ngFor="let que of q2">{{que}}</td>
+                <td *ngFor="let que of q3">{{que}}</td>
+                <td *ngFor="let que of q4">{{que}}</td>
+            </tr>
+            <!-- line3 -->
+            <tr>
+                <td class="pr">Gross Margin %</td>
+                <td *ngFor="let que of q1">{{que}}</td>
+                <td *ngFor="let que of q2">{{que}}</td>
+                <td *ngFor="let que of q3">{{que}}</td>
+                <td *ngFor="let que of q4">{{que}}</td>
+            </tr>    
+            <!-- line4 -->
+            <tr>
+                <td class="pr">Billable Head count</td>
+                <td *ngFor="let que of q1">{{que}}</td>
+                <td *ngFor="let que of q2">{{que}}</td>
+                <td *ngFor="let que of q3">{{que}}</td>
+                <td *ngFor="let que of q4">{{que}}</td>
+            </tr>
+            <!-- line5 -->
+            <tr>
+                <td class="pr">Per Person Revenue</td>
+                <td *ngFor="let que of q1">{{que}}</td>
+                <td *ngFor="let que of q2">{{que}}</td>
+                <td *ngFor="let que of q3">{{que}}</td>
+                <td *ngFor="let que of q4">{{que}}</td>
+            </tr>    
+            <!-- line6 -->
+            <tr>
+                <td class="pr">Per Person Cost</td>
+                <td *ngFor="let que of q1">{{que}}</td>
+                <td *ngFor="let que of q2">{{que}}</td>
+                <td *ngFor="let que of q3">{{que}}</td>
+                <td *ngFor="let que of q4">{{que}}</td>
+            </tr>   
+        </tbody>
+    </table>
+  </div>
+</div>
+</div>

@@ -1,0 +1,37 @@
+
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+.bg{
+    background-image: url(https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171__340.jpg);
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 625px;
+    border: 2px solid black;
+}
+.example-container{
+    border: 2px solid rgb(253, 252, 252);
+    border-radius: 25px;
+    box-shadow: 2px 2px 10px 1px #555;
+    width: 350px;
+    background-color: white;
+    margin: 75px auto;
+    padding: 25px;
+}
+.btns{
+  padding: 5px 25px;
+  margin-top: 12px;
+}
+.add{
+  float: right;
+}

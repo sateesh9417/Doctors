@@ -1,0 +1,55 @@
+<div class="container">
+    <h1 class="text-center fw-bold text-primary p-3"><u>TO-DO-LIST</u></h1>
+    <div class="row">
+       <div class="col-4 fw-bold">
+           <h2 class="text-center fw-bold text-success pb-3"><u>Dates:</u></h2>
+            <ul type="square" *ngFor="let task of todoTask">
+                <li><a (click)="createTask(task.date)" class="text-decoration-none">{{task.date}}</a></li>
+            </ul>
+       </div>
+       <div class="col-7 ml-2 fw-bold">
+           <h2 class="text-center fw-bold text-success pb-3"><u>Tasks:</u></h2>
+            <ul type="circle" *ngFor="let task of date">
+                <li class="mb-3" *ngFor="let x of task.tasks;index as i">
+                 {{x}}
+                    <span>
+                      <button type="button" class="btn btn-primary Edit"  data-bs-toggle="modal" (click)="editTask(i,task.id)" data-bs-target="#exampleModal">Edit</button>
+                       <button mat-raised-button (click)="deleteTask(i,task.id)" color="accent">Remove</button>
+                    </span>
+                </li>
+            </ul>
+       </div>
+    </div>
+    <div class="btns pt-3">
+         <a routerLink="/add"><button mat-raised-button color="primary">Add-List</button></a>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title fw-bold" id="exampleModalLabel">Update Todo-list</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="" #editTaskForm="ngForm" (ngSubmit)="onTaskSubmit()">
+                    <div class="form-group">
+                        <label for="">update task</label>
+                        <input type="text" [(ngModel)]="updateSelect" name="updateSelect" value="{{select}}" class="form-control" placeholder="Enter new task">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Update</button>
+                    </div>
+                </form>
+             </div>
+        </div>
+    </div>
+</div>
+                                              <!-- /modal -->
+
+
+
+

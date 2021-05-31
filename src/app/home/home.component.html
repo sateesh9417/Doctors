@@ -1,0 +1,193 @@
+<h1 class="text-center fw-bold text-primary mt-5"><u>Employee Details</u></h1>
+<div class="container">
+    <div class="main">
+      <div class="employee">
+        <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <mat-label>Employee Name</mat-label>
+            <input type="text" matInput [formControl]="myControl" [(ngModel)]="name" [matAutocomplete]="auto">
+            <mat-autocomplete #auto="matAutocomplete">
+              <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                {{option}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </form>
+    </div>
+    <div class="details" *ngIf="name">
+          <form class="example-form">
+             <div *ngFor="let x of employees">
+                <div *ngIf="name==x.ename">
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Contact Number</mat-label>
+                    <input type="number" matInput placeholder="contact number" value="{{x.number}}">
+                    </mat-form-field>
+                </div>
+                <div *ngIf="name==x.ename">
+                   <mat-form-field class="example-full-width">
+                   <mat-label>Email Id</mat-label>
+                   <input type="email" matInput placeholder="email id" value="{{x.email}}">
+                   </mat-form-field>
+                </div>
+                 <div *ngIf="name==x.ename">
+                     <mat-form-field class="example-full-width">
+                     <mat-label>Place</mat-label>
+                     <input type="text" matInput placeholder="place" value="{{x.place}}">
+                     </mat-form-field>
+                 </div>
+             </div>
+         </form>
+     </div>
+    <!-- normal form TDF -->
+</div>
+<div class="form-row" *ngFor="let emp of empArray;let i=index">
+<div class="employee-form">
+  <span class="btn text-dark fw-bold cross" *ngIf="i!==0" (click)="remove(i)">&times;</span>
+          <form class="example-form" #employeeform="ngForm" (ngSubmit)="onFormSubmit(employeeform)">
+                <legend class="text-center fw-bold mb-4">Employee Form</legend>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Employee Name</mat-label>
+                    <input type="text"
+                           placeholder="Enter your Name"
+                           aria-label="text"
+                           [(ngModel)]="emp.ename"
+                           matInput
+                           name="ename{{i}}" #ename="ngModel" ngModel id="ename"
+                           >
+                    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">      
+                    </mat-autocomplete>
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Email Id</mat-label>
+                    <input type="email"
+                           placeholder="enter your email id"
+                           aria-label="text"
+                           [(ngModel)]="emp.email"
+                           matInput
+                           name="email{{i}}" #email="ngModel" ngModel id="email"
+                           >
+                    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">      
+                    </mat-autocomplete>
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Contact No</mat-label>
+                    <input type="number"
+                           placeholder="enter your contact number"
+                           aria-label="text"
+                           [(ngModel)]="emp.contact"
+                           matInput
+                           name="number{{i}}" #number="ngModel" ngModel id="number"
+                           >
+                    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">      
+                    </mat-autocomplete>
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Place</mat-label>
+                    <input type="text"
+                           placeholder="enter your place"
+                           aria-label="text"
+                           [(ngModel)]="emp.place"
+                           matInput
+                           name="place{{i}}" #place="ngModel" ngModel id="place"
+                           >
+                    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">      
+                    </mat-autocomplete>
+                  </mat-form-field>
+                 <div class="btns">
+                    <button type="submit" mat-raised-button color="accent">Submit</button>
+                    <button mat-raised-button color="primary" (click)="addForm()" class="add">Add(+)</button>
+                 </div>
+          </form>
+    </div>
+</div>
+
+
+<!-- reactive form -->
+    <div>
+          <button class="btn btn-success" (click)="addEmployee()">reactive form</button>
+    </div>
+<div class="container">
+<!-- <div class="arrangeForm af">
+  <form class="example-for" #employeeForm="ngForm" (ngSubmit)="onFormSubmit(employeeForm)">
+    <legend class="text-center fw-bold mb-4">Employee Form</legend>
+    <mat-form-field class="example-full-width">
+        <mat-label>Employee Name</mat-label>
+             <input type="text" class="form-control" matInput name="ename" #ename="ngModel" ngModel id="ename">
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">      
+        </mat-autocomplete>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Email Id</mat-label>
+           <input type="text" class="form-control" matInput name="email" #email="ngModel" ngModel id="email">
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">      
+        </mat-autocomplete>
+      </mat-form-field>
+          <mat-form-field class="example-full-width">
+              <mat-label>Contact No</mat-label>
+                <input type="text" class="form-control" matInput name="contact" #contact="ngModel" ngModel id="contact">
+              <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">      
+            </mat-autocomplete>
+      </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Place</mat-label>
+                  <input type="text" class="form-control" matInput name="place" #place="ngModel" ngModel id="place">
+                <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">      
+              </mat-autocomplete>
+            </mat-form-field>
+     <div class="btns">
+        <button type="submit" mat-raised-button color="accent">Submit</button>
+        <button mat-raised-button color="primary" (click)="addEmployee()" class="add">Add(+)</button>
+     </div>
+  </form>
+</div> -->
+<!-- hello -->
+ <div class="af">
+  <form [formGroup]="rForm" (ngSubmit)="onSubmit()">
+    <div formArrayName="arrayEmp">
+      <div class="line1" *ngFor="let r of arrayEmp().controls;let i=index">
+       <div class="employee-form arrangeForm">
+         <span class="btn text-dark fw-bold cross" (click)="removeEm(i)">&times;</span>
+                 <form class="example-for" #employeeForm="ngForm" (ngSubmit)="onFormSubmit(employeeForm)">
+                       <legend class="text-center fw-bold mb-4">Employee Form</legend>
+                       <mat-form-field class="example-full-width">
+                           <mat-label>Employee Name</mat-label>
+                                <input type="text" class="form-control" matInput name="ename" #ename="ngModel" ngModel id="ename">
+                           <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">      
+                           </mat-autocomplete>
+                         </mat-form-field>
+                         <mat-form-field class="example-full-width">
+                           <mat-label>Email Id</mat-label>
+                              <input type="text" class="form-control" matInput name="email" #email="ngModel" ngModel id="email">
+                           <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">      
+                           </mat-autocomplete>
+                         </mat-form-field>
+                             <mat-form-field class="example-full-width">
+                                 <mat-label>Contact No</mat-label>
+                                   <input type="text" class="form-control" matInput name="contact" #contact="ngModel" ngModel id="contact">
+                                 <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">      
+                               </mat-autocomplete>
+                         </mat-form-field>
+                               <mat-form-field class="example-full-width">
+                                   <mat-label>Place</mat-label>
+                                     <input type="text" class="form-control" matInput name="place" #place="ngModel" ngModel id="place">
+                                   <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">      
+                                 </mat-autocomplete>
+                               </mat-form-field>
+                        <div class="btns">
+                           <button type="submit" mat-raised-button color="accent">Submit</button>
+                           <button mat-raised-button color="primary" (click)="addEmployee()" class="add">Add(+)</button>
+                        </div>
+                 </form>
+           </div>
+      </div>
+    </div>
+  </form>
+ </div>
+</div>
+
+
+
+
+ 
+
+  

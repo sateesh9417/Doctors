@@ -1,0 +1,164 @@
+{
+  "employees": [
+    {
+      "ename": "Sateesh",
+      "number": 6300580832,
+      "email": "sateesh@gmail.com",
+      "place": "Srikalahasti"
+    },
+    {
+      "ename": "Abbas",
+      "number": 7300580652,
+      "email": "abbas@gmail.com",
+      "place": "Srikalahasti"
+    },
+    {
+      "ename": "Sivaji",
+      "number": 6300085832,
+      "email": "sivaji@gmail.com",
+      "place": "Nellore"
+    },
+    {
+      "ename": "Sanjay",
+      "number": 9600580832,
+      "email": "sanjay@gmail.com",
+      "place": "Banglore"
+    },
+    {
+      "ename": "Abhi",
+      "number": 8900580832,
+      "email": "abhi@gmail.com",
+      "place": "Tirupati"
+    }
+  ],
+  "todoList": [
+    {
+      "id": 11,
+      "date": "2021-05-25",
+      "tasks": [
+        "register-form task",
+        "emp table project"
+      ]
+    },
+    {
+      "id": 12,
+      "date": "2021-05-25",
+      "tasks": [
+        "register-form project",
+        "Navigation project"
+      ]
+    },
+    {
+      "id": 13,
+      "date": "30-05-2021",
+      "tasks": [
+        "tdf ad rf projects"
+      ]
+    },
+    {
+      "id": 14,
+      "date": "02-06-2021",
+      "tasks": [
+        "sidebar with responsive and good ui"
+      ]
+    },
+    {
+      "date": "03-06-2021",
+      "id": 15,
+      "tasks": [
+        "employee salary table"
+      ]
+    }
+  ],
+  "Patients": [
+    {
+      "id": 1,
+      "name": "Nancy chopra",
+      "date": "2021-05-27",
+      "email": "nancy@gmail.com",
+      "Url": "https://www.htmlelements.com/demos/images/people/nancy.jpg",
+      "diagnosis": "Scolionophobia"
+    },
+    {
+      "id": 2,
+      "name": "Nancy",
+      "date": "2021-05-27",
+      "email": "nancy@gmail.com",
+      "Url": "https://www.htmlelements.com/demos/images/people/nancy.jpg",
+      "diagnosis": "Scolionophobia",
+      "sumptoms": "Fear of School"
+    },
+    {
+      "id": 3,
+      "name": "John Livering",
+      "date": "2021-05-29",
+      "email": "john@gmail.com",
+      "Url": "https://www.htmlelements.com/demos/images/people/john.jpg",
+      "diagnosis": "Pyrophobia",
+      "symptoms": "Fear of Fire"
+    },
+    {
+      "id": 4,
+      "name": "Mark Suyama",
+      "date": "2021-05-30",
+      "email": "suyama@gmail.com",
+      "Url": "https://www.htmlelements.com/demos/images/people/mark.jpg",
+      "diagnosis": "Necrophobia",
+      "symptoms": "Fear of Deaths or Dead Things"
+    },
+    {
+      "id": 5,
+      "name": "Maria",
+      "date": "2021-06-01",
+      "email": "maria@gmail.com",
+      "Url": "https://www.htmlelements.com/demos/images/people/maria.jpg",
+      "diagnosis": "Meghalophobia",
+      "symptoms": "Fear of large Things"
+    },
+    {
+      "id": 6,
+      "name": "Stephen hock",
+      "date": "2021-06-02",
+      "email": "stephen@gmail.com",
+      "Url": "https://www.htmlelements.com/demos/images/people/steven.jpg",
+      "diagnosis": "Microphobia",
+      "sumptoms": "Fear of Small Things"
+    },
+    {
+      "id": 7,
+      "name": "Loura",
+      "date": "2021-06-04",
+      "email": "loura@gmail.com",
+      "Url": "https://www.htmlelements.com/demos/images/people/laura.jpg",
+      "diagnosis": "Obesophobia",
+      "symptoms": "Fear of Gaining Weight"
+    },
+    {
+      "id": 8,
+      "name": "Robert",
+      "date": "2021-06-07",
+      "email": "robert@gmail.com",
+      "Url": "https://www.htmlelements.com/demos/images/people/robert.jpg",
+      "diagnosis": "pathophobia",
+      "symptoms": "Fear of Diseases"
+    },
+    {
+      "id": 9,
+      "name": "Annie Barone",
+      "date": "2021-06-09",
+      "email": "annie@gmail.com",
+      "Url": "https://www.htmlelements.com/demos/images/people/anne.jpg",
+      "diagnosis": "Tachophobia",
+      "symptoms": "Fear of speed"
+    },
+    {
+      "id": 10,
+      "name": "Janet Peterson",
+      "date": "2021-06-12",
+      "email": "janet@gmail.com",
+      "Url": "https://www.htmlelements.com/demos/images/people/janet.jpg",
+      "diagnosis": "Zoophobia",
+      "symptoms": "Fear of Animals"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+div h1{
+    font-weight: 800;
+    padding: 16px 0 0 21px;
+}
+.mini-container div img{
+    border-radius: 50%;
+    padding: 5px;
+}
+.mini-container{
+    display: flex;
+    justify-content: space-between;
+    padding:5px 17px;
+    background-color: white;
+    box-shadow: 2px 2px 5px 1px #555;
+}
+.main-section{
+    padding: 10px;
+}
+.main-body,.form-image{
+    display: flex;
+    justify-content: space-between;
+}
+.bar-chart{
+  background-color: white;
+  box-shadow: 2px 2px 5px 1px #555;
+    width: 49%;
+}
+.form-image .forms{
+  width:100%;
+}
+.form-image form{
+    padding: 10px;
+    font-weight: bold;
+}
+form input{
+    margin-bottom: 15px;
+    border: 2px solid #555;
+}
+.form-image{
+    width: 49%;
+    background-color: white;
+    box-shadow: 2px 2px 5px 1px #555;
+    padding-left: 10px;
+}
+.form-image img{
+   margin:55px 0;
+}
+.reset{
+    float: right;
+}
+.btns .btn{
+    padding: 5px 25px;
+}
+.btns{
+    width: 200px;
+    margin: auto;
+}
+table{
+    width:100%;
+    height: 250px;
+    background-color: white;
+    box-shadow: 2px 2px 5px 1px #555;
+    cursor: default;
+}
+table thead tr th:hover{
+    background-color:rgb(223, 219, 219) ;
+}
+.table-body{
+    padding:14px 0 60px 0;
+}
+thead{
+    background-color: rgb(247, 245, 240);
+}
+.position,.search{
+    display: flex;
+    justify-content: space-between;
+}
+.position{
+    background-color: rgb(233, 231, 224);
+    padding: 4px;
+}
+.search{
+    border: 2px solid rgb(114, 114, 114);
+    border-radius: 7px;
+}
+.search input{
+    border: none;
+}
+.search-patient .bg-light{
+    box-shadow: 2px 2px 5px 1px #555;
+}
+.data:hover{
+    border-radius: 5px;
+    background-color: rgb(230, 233, 238);
+    width: 250px;
+    cursor: pointer;
+}
+.data span{
+    padding-left: 20px;
+}
+.form-check{
+    display: inline-block;
+    padding-left: 45px;
+}
+i{
+    font-size: 20px;
+    padding-right: 10px;
+}
+.selected{
+    background-color: aqua;
+}

@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="search col-md-3 m-auto">
+        <div class="input-group rounded m-3">
+            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+              aria-describedby="search-addon" [(ngModel)]="mName" (keyup)="searchMovie()"/>
+            <span class="input-group-text border-0" id="search-addon" (click)="searchMovie()">
+              <i class="fa fa-search"></i>
+            </span>
+          </div>
+    </div>
+    <div class="movies-container col-md-6 card-deck m-auto">
+        <div class="card text-center">
+            <div class="card-body">
+                <img [src]="movies.Poster" alt="No image" width="400px" height="380px">
+                <p class="mt-2 fw-bold">{{movies.Released}}</p>
+                <h1 class="fw-bold">Director:- {{movies.Director}}</h1>
+                <h2>Actors:- {{movies.Actors}}</h2>
+            </div>
+            <div class="card-footer">
+                <h1><a class="text-decoration-none fw-bold" [href]="'https://www.google.com/search?q='+movies.Title">{{movies.Title}}</a></h1>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+table td,th{
+    padding:12px 10px;
+}
+.mini-container{
+    max-width: 1350px;
+}
+.btns{
+    background-color: blueviolet;
+    border-radius: 50px;
+    padding: 10px;
+    width: 280px;
+}
+.btn{
+    color: white;
+    font-weight: 500;
+}
+.btn:hover{
+    color: black;
+    background-color: white;
+    border-radius: 30px;
+}
+.head{
+    background-color:#7c92a5
+}
+.body,.pr{
+    background-color: rgb(219, 174, 123);
+}
+tbody,.bg-pr{
+    background-color: yellowgreen;
+}
+.pro{
+    background-color:rgb(111, 181, 187) !important;
+}
+
+

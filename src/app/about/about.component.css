@@ -1,0 +1,31 @@
+.example-stepper {
+    margin-top: 8px;
+  }
+  
+  .mat-form-field {
+    margin-top: 16px;
+  }
+  th,td{
+    padding: 15px 0;
+  }
+  .u td{
+    padding: 15px 20px;
+  }
+  .r1{
+    padding: 66px 20px !important;
+    font-size: 20px;
+  }
+  .u table{
+    margin-top: 72px;
+    width: 235px;
+  }
+  .yearly{
+    overflow-x: auto;
+  }
+ .v{
+   overflow-x: scroll;
+ }
+  .section{
+    display: inline-flex;
+    width: 100%;
+  }
