@@ -60,28 +60,7 @@ onSelectPatient(id:number,index:any){
   this.pDate = this.selectPatient.date;
   this.pDiagnosis = this.selectPatient.diagnosis;
   this.pSymptoms = this.selectPatient.symptoms;
-  
-  const x:any=document.getElementById('table')
-  x.style.backgroundColor="skyblue"
-  console.log(x);
 }
-
-rowIndex:any
-classList:any
-clickMe(){
-  const table:any = document.getElementById('table')
-  for(var i=0; i<table.rows.length; i++){
-    table.rows[i].onclick=()=>{
-      if(typeof this.index!== "undefined"){
-        table.rows[this.index].classList.toggle("selected");
-      }
-      this.index=this.rowIndex;
-      this.classList.toggle("selected");
-      console.log(this.index);
-    }
-  }
-}
-
 
   ngOnInit(): void {
    this.pform= new FormGroup({

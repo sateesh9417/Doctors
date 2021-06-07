@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Patient } from './patient';
+import { Postal } from './postal';
 import { Todolist } from './todolist'
 
 @Injectable({
@@ -38,9 +39,10 @@ putPatients(id:number,d:any){
   return this.http.put<{response:Patient}>(`${environment.patientUrl}/${id}`,d)
 }
 
-mName="sivaji"
-getMovie(){
-  return this.http.get<any>(`${environment.movieUrl}&t=${this.mName}`)
+
+  Pcode!:number;
+getPostal(){
+  return this.http.get<{response:Postal}>(`${environment.postalUrl}${this.Pcode}&countrycode=IN`)
 }
 
 }

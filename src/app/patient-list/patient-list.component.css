@@ -106,6 +106,6 @@ i{
     font-size: 20px;
     padding-right: 10px;
 }
-.selected{
-    background-color: aqua;
+.active{
+    background-color: rgb(219, 145, 241);
 }

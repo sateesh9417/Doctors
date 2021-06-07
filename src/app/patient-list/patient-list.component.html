@@ -74,12 +74,12 @@
                 </thead>
                 <tbody>
                      <tr *ngFor="let x of patientList;index as i" (click)="onSelectPatient(i,x.id)"  id="table">
-                          <td>{{i+1}}</td>
-                          <td>{{x.date}}</td>
-                          <td>{{x.name}}</td>
-                          <td>{{x.email}}</td>
-                          <td>{{x.diagnosis}}</td>
-                          <td>{{x.symptoms}}</td>
+                          <td (click)="onSelectPatient(x.id,i)" [ngClass]="{'active':pId==x.id}">{{i+1}}</td>
+                          <td (click)="onSelectPatient(x.id,i)" [ngClass]="{'active':pId==x.id}">{{x.date}}</td>
+                          <td (click)="onSelectPatient(x.id,i)" [ngClass]="{'active':pId==x.id}">{{x.name}}</td>
+                          <td (click)="onSelectPatient(x.id,i)" [ngClass]="{'active':pId==x.id}">{{x.email}}</td>
+                          <td (click)="onSelectPatient(x.id,i)" [ngClass]="{'active':pId==x.id}">{{x.diagnosis}}</td>
+                          <td (click)="onSelectPatient(x.id,i)" [ngClass]="{'active':pId==x.id}">{{x.symptoms}}</td>
                      </tr>
                 </tbody>
            </table>

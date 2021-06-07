@@ -8,17 +8,15 @@
             </span>
           </div>
     </div>
-    <div class="movies-container col-md-6 card-deck m-auto">
-        <div class="card text-center">
-            <div class="card-body">
-                <img [src]="movies.Poster" alt="No image" width="400px" height="380px">
-                <p class="mt-2 fw-bold">{{movies.Released}}</p>
-                <h1 class="fw-bold">Director:- {{movies.Director}}</h1>
-                <h2>Actors:- {{movies.Actors}}</h2>
-            </div>
-            <div class="card-footer">
-                <h1><a class="text-decoration-none fw-bold" [href]="'https://www.google.com/search?q='+movies.Title">{{movies.Title}}</a></h1>
-            </div>
-        </div>
+    <div class="row">
+         <div class="col-md-4 text-center p-3" *ngFor="let x of search">
+             <div class="grid py-3">
+                <a [href]="'https://www.google.com/search?q='+x.Title"><img [src]="x.Poster" alt="No image" width="250px" height="300px"></a>
+                <p class="mt-2 fw-bold text-light">{{x.Year}}</p>
+                <h1 class="fw-bold">ID:- {{x.imdbID}}</h1>
+                <h2 class="text-light">Type:-{{x.Type}}</h2>
+                <h1><a class="text-decoration-none fw-bold" [href]="'https://www.google.com/search?q='+x.Title">{{x.Title}}</a></h1>
+             </div>
+         </div>
     </div>
 </div>

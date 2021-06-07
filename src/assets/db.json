@@ -73,20 +73,21 @@
   "Patients": [
     {
       "id": 1,
+      "name": "Andrew Fuller",
+      "date": "2021-05-26",
+      "email": "andrew@gmail.com",
+      "Url": "https://www.htmlelements.com/demos/images/people/andrew.jpg",
+      "diagnosis": "Aerophobia",
+      "symptoms": "Fear of Flying"
+    },
+    {
+      "id": 2,
       "name": "Nancy chopra",
       "date": "2021-05-27",
       "email": "nancy@gmail.com",
       "Url": "https://www.htmlelements.com/demos/images/people/nancy.jpg",
-      "diagnosis": "Scolionophobia"
-    },
-    {
-      "id": 2,
-      "name": "Nancy",
-      "date": "2021-05-27",
-      "email": "nancy@gmail.com",
-      "Url": "https://www.htmlelements.com/demos/images/people/nancy.jpg",
       "diagnosis": "Scolionophobia",
-      "sumptoms": "Fear of School"
+      "symptoms": "Fear of School"
     },
     {
       "id": 3,
@@ -122,7 +123,7 @@
       "email": "stephen@gmail.com",
       "Url": "https://www.htmlelements.com/demos/images/people/steven.jpg",
       "diagnosis": "Microphobia",
-      "sumptoms": "Fear of Small Things"
+      "symptoms": "Fear of Small Things"
     },
     {
       "id": 7,

@@ -1,0 +1,51 @@
+<div class="container-fluid">
+            <div class="input-group rounded my-3 fw-bold mx-auto">
+                <input type="search" class="form-control rounded" placeholder="Enter postal code.." aria-label="Search"
+                  aria-describedby="search-addon" [(ngModel)]="Pcode" (keyup)="getDetails()"/>
+                <button type="button" class="btn btn-success" (click)="getDetails()"><i class="fa fa-search"></i></button>
+            </div>
+        <div class="row">
+            <div class="col-md-3" *ngFor="let x of Details">
+                <div class="details">
+                    <tr>
+                        <div>
+                            <td><b>District:</b></td>
+                            <td class="value">{{x.district}}</td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <div>
+                            <td><b>Postal-Location:</b></td>
+                            <td class="value">{{x.postalLocation}}</td>
+                        </div>
+                    </tr>
+                    <tr>
+                         <div>
+                            <td><b>Province:</b></td>
+                            <td class="value">{{x.province}}</td>
+                         </div>
+                    </tr>
+                    <tr>
+                        <div>
+                            <td><b>State:</b></td>
+                            <td class="value">{{x.state}}</td>
+                        </div>
+                    </tr>
+                </div>
+            </div>
+        </div>
+
+        <div class="body">
+             <div class="text-center py-2">
+                 <input #search id="pac-input" type="text" placeholder="Enter a location">
+                 <button type="button"><i class="fa fa-search"></i></button>
+             </div>
+             <div>
+                 <h1 class="text-center fw-bold"><u>Postal-Location</u></h1>
+                 <p class="text-center"><a href="https://angular-maps.com/" target="_blank">Official Website</a></p>
+                 <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+                     <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+                 </agm-map>
+             </div>
+        </div>
+</div>

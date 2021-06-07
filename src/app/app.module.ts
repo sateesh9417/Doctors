@@ -24,8 +24,8 @@ import { PatientListComponent } from './patient-list/patient-list.component';
 import { FilterPatientPipe } from './filter-patient.pipe';
 import { ChartsModule } from 'ng2-charts';
 import { MoviesComponent } from './movies/movies.component';
-
-
+import { PostalCodeComponent } from './postal-code/postal-code.component';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -38,7 +38,8 @@ import { MoviesComponent } from './movies/movies.component';
     LoginComponent,
     PatientListComponent,
     FilterPatientPipe,
-    MoviesComponent
+    MoviesComponent,
+    PostalCodeComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +57,9 @@ import { MoviesComponent } from './movies/movies.component';
     MatIconModule,
     MatDialogModule,
     ChartsModule,
+    AgmCoreModule.forRoot({apiKey:'AIzaSyAuQNLLvC99DNsuyQaFMcj7YCLRjz5gisQ',
+    libraries: ["places"],
+    apiVersion: 'quarterly'})
     
   ],
   providers: [],

@@ -5,17 +5,11 @@
 .input-group{
     box-shadow: 2px 2px 7px 1px rgb(88, 88, 90);
 }
-.card-footer a{
-    color: rgb(171, 12, 219);
-    text-shadow: 2px 2px 1px rgb(239, 236, 241);
-    font-size: 35px;
-}
-.card-footer a:hover{
-    color: rgb(50, 82, 3);
-}
-.movies-container{
-    padding:15px 0 45px 0;
-}
-.card-body img{
+.grid{
+    background-color: rgb(252, 183, 56);
     border-radius: 15px;
+    box-shadow: 2px 2px 7px 1px rgb(88, 88, 90);
+}
+.grid img{
+    border-radius: 10px;
 }

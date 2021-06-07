@@ -1,0 +1,45 @@
+
+.input-group{
+    max-width: 230px !important;
+    box-shadow: 2px 2px 5px 1px #555;
+}
+.search-container{
+    background-color: coral;
+    border-radius: 15px;
+    box-shadow: 2px 2px 7px 1px #555;
+    padding: 7px;
+}
+.row div div{
+    background-color: rgb(238, 230, 119);
+    border-radius: 15px;
+    padding: 15px;
+    margin: 5px;
+    box-shadow: 2px 2px 4px 1px #555;
+}
+.row div div tr div{
+    border: 2px solid rgb(83, 82, 82);
+    border-radius: 7px;
+    padding: 5px;
+    background-color: rgb(209, 244, 245);
+}
+.value{
+    padding-left: 5px;
+    font-weight: 900;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+agm-map{
+    height: 500px;
+    width:100%;
+}
+.body div{
+    width: 48%;
+    border: 2px solid rgb(82, 78, 78);
+    border-radius: 10px;
+}
+.body{
+    padding: 45px 0;
+   display: flex;
+   justify-content: space-evenly;
+}
+
+  

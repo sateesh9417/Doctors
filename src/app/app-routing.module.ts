@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { MoviesComponent } from './movies/movies.component';
 import { PatientListComponent } from './patient-list/patient-list.component';
+import { PostalCodeComponent } from './postal-code/postal-code.component';
 import { ToDoListComponent } from './to-do-list/to-do-list.component';
 
 const routes: Routes = [
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path:"add",component:AddListComponent},
   {path:"Login",component:LoginComponent},
   {path:'patient',component:PatientListComponent},
-  {path:'movies',component:MoviesComponent}
+  {path:'movies',component:MoviesComponent},
+  {path:'postal',component:PostalCodeComponent}
 ];
 
 @NgModule({

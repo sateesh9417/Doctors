@@ -6,7 +6,8 @@ export const environment = {
   production: false,
   baseUrl:"http://localhost:3100/todoList",
   patientUrl:"http://localhost:3100/Patients",
-  movieUrl:"http://www.omdbapi.com/?i=tt3896198&apikey=6e02eec0"
+  movieUrl:"http://www.omdbapi.com/?i=tt3896198&apikey=6e02eec0",
+  postalUrl:"https://api.worldpostallocations.com/pincode?postalcode="
 };
 
 /*
